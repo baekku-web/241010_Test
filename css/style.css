@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+* {padding:0; 
+    margin:0; 
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+h2 {
+    font: 10pt/190% 'Gugi', cursive;
+    font-weight: bold;
+}
+
+p , li {
+    font: 10pt/190% 'Nanum Gothic', sans-serif; 
+    font-weight: bold;
+}
+
+/*전체 레이아웃*/
+#layout {
+    padding:10px 10px 0 10px; 
+    position:relative;
+}
+
+header>button {
+    border:none;
+}
+
+a {
+    text-decoration:none; 
+    color:black;
+}
+
+img {
+    max-width:100%;
+}
+
+/*상단*/
+header {
+    max-width:500px; 
+    margin:auto; 
+    background:#499b00; 
+    color:white; 
+    display:flex; 
+    padding: 20px;
+}
+
+header>button {
+    background: transparent; 
+    color: white;
+}
+
+header>h1 {
+    flex:0.95; 
+    text-align:center;
+    font-size: 1.5rem;
+}
+
+/*메뉴*/
+#layout {
+    max-width:500px; 
+    margin:auto;
+}
+
+#layout>nav {
+    position:absolute; 
+    width:100%; 
+    left:0; 
+    top:0; 
+    background:white; 
+    height: 80vh; 
+    box-shadow:0 5px 10px rgba(0,0,0, 0.5); 
+    display:none;
+}
+
+#layout ul	{
+    list-style:none inside url("../images/bullet.png"); 
+}
+
+#layout ul>li {
+    border-bottom:1px solid #ddd; 
+    padding:20px; 
+}
+
+#layout ul>li>a {
+    padding-left: 10px;
+}
+
+/*메인*/
+main>h2	{
+    padding-top:20px; 
+    padding-bottom:10px;
+    font-size: 1.3rem;
+}
+
+main>p	{
+    text-align: justify;
+}
+
+main>p::first-letter {
+    font-size:1.5rem; 
+    font-weight:bold; 
+    color:#499b00;
+}
+
+/* ---------------------------- */
+main>p>img	{
+    width:100px;
+}
+
+main>p:first-of-type>img {
+    float: right; 
+    margin-top: 10px;
+    margin-left:10px;
+}
+
+main>p:last-of-type>img  {
+    float: left; 
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+/* ---------------------------- */
+main>ol	{
+    color:#499b00; 
+    list-style-position: inside; 
+    margin-bottom: 10px; 
+    background:url("../images/bg.jpg") no-repeat left / contain;
+}
+
+main>ol li {
+    position: relative;
+    left: 50%;
+    z-index: -1;
+}
+
+/* ---------------------------- */
+main>figure {
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+main>figure>img {
+    width: 95%; 
+    margin: auto; 
+    display: block; 
+    border-radius: 20px; 
+    box-shadow:2px 2px 5px #555;
+}
+
+main>figure>figcaption {
+    font-size:0.6rem; 
+    color: #aaa;
+    text-align:center; 
+    padding-top:5px;
+}
+
+/* 부가정보 */
+div+aside {
+    max-width:500px; 
+    margin:auto;
+    padding:15px; 
+    background:#e2ef97; 
+    margin-top:20px;
+}
+
+div+aside>h2 {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+div+aside>h2::before {
+    content: "\2618";
+    color: #499b00;
+}
+
+/* 하단 */
+footer {
+    max-width:500px; 
+    margin:auto; 
+    padding:15px; 
+    background:#ddd;
+    text-align: center;
+}
+
+
+/* 위로 */
+body>a	{
+    position:fixed; 
+    /* right:calc(((100% - 500px) / 2 ) + 5px);  */
+    left: 65%;
+    bottom:10px; 
+    background:white; 
+    box-shadow:0 0 5px black; 
+    border-radius:5px;
+    width: 15px;
+    text-align: center;
+}
+
+/***********************************************/
+/* 넓이가 500픽셀 이하인 기계장치
+@media(max-width:500px) {
+		body>a {right:5px;}
+} */
+
+
+
+
